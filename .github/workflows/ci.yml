@@ -13,7 +13,7 @@ jobs:
     name: Gate 1 - Build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Build artifact
         run: bash scripts/build-artifact.sh
 
@@ -21,7 +21,7 @@ jobs:
     name: Core repository validation
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Validate baseline repository
         run: bash scripts/validate.sh
 
@@ -31,7 +31,7 @@ jobs:
     needs: [build, core-repository]
     if: github.event_name == 'pull_request'
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Publish review contract
         run: |
           echo "Advisory review capabilities: architecture, security, devops, ai-engineering"
