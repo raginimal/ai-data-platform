@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+if test -f pyproject.toml; then
+  python -m pytest
+  exit 0
+fi
+
 if test -d tests && find tests -type f -not -name README.md -print -quit | grep -q .; then
   echo "Project tests detected; configure the stack overlay test command in scripts/test.sh."
   exit 1
