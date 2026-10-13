@@ -1,0 +1,25 @@
+[0m00:36:31.337555 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020F90BB9890>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020F90BAA750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020F90D43FD0>]}
+
+
+============================== 00:36:31.353420 | dd42e13d-58fc-43ec-986e-2a41868ead5b ==============================
+[0m00:36:31.353420 [info ] [MainThread]: Running with dbt=1.12.5
+[0m00:36:31.353420 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'C:\\Users\\ragimalhotra\\AppData\\Local\\Temp\\pytest-of-ragimalhotra\\pytest-0\\test_dbt_project_parses0\\target', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\ragimalhotra\\OneDrive\\ai-data-platform\\src\\transform', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'invocation_command': 'dbt parse --project-dir C:\\Users\\ragimalhotra\\OneDrive\\ai-data-platform\\src\\transform --profiles-dir C:\\Users\\ragimalhotra\\OneDrive\\ai-data-platform\\src\\transform --target-path C:\\Users\\ragimalhotra\\AppData\\Local\\Temp\\pytest-of-ragimalhotra\\pytest-0\\test_dbt_project_parses0\\target', 'log_path': 'C:\\Users\\ragimalhotra\\OneDrive\\ai-data-platform\\src\\transform\\logs'}
+[0m00:36:32.086904 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'dd42e13d-58fc-43ec-986e-2a41868ead5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020F91080990>]}
+[0m00:36:32.153734 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'dd42e13d-58fc-43ec-986e-2a41868ead5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020F8C55FB50>]}
+[0m00:36:32.187805 [info ] [MainThread]: Registered adapter: duckdb=1.11.0
+[0m00:36:33.370484 [debug] [MainThread]: checksum: a819ad5667098236012e0ab9f10d71c61eece7f300df690214b73896fdaa3356, vars: {}, profile: data_platform, target: test, version: 1.12.5
+[0m00:36:33.370484 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m00:36:33.370484 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'dd42e13d-58fc-43ec-986e-2a41868ead5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020F9100BF10>]}
+[0m00:36:38.220421 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.data_platform.marts
+- models.data_platform.staging
+[0m00:36:38.220421 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'dd42e13d-58fc-43ec-986e-2a41868ead5b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020F91309ED0>]}
+[0m00:36:38.229136 [info ] [MainThread]: Performance info: C:\Users\ragimalhotra\AppData\Local\Temp\pytest-of-ragimalhotra\pytest-0\test_dbt_project_parses0\target\perf_info.json
+[0m00:36:38.300572 [debug] [MainThread]: Wrote artifact WritableManifest to C:\Users\ragimalhotra\AppData\Local\Temp\pytest-of-ragimalhotra\pytest-0\test_dbt_project_parses0\target\manifest.json
+[0m00:36:38.337569 [debug] [MainThread]: Wrote artifact SemanticManifest to C:\Users\ragimalhotra\AppData\Local\Temp\pytest-of-ragimalhotra\pytest-0\test_dbt_project_parses0\target\semantic_manifest.json
+[0m00:36:38.438421 [debug] [MainThread]: Wrote artifact OsiDocument to C:\Users\ragimalhotra\AppData\Local\Temp\pytest-of-ragimalhotra\pytest-0\test_dbt_project_parses0\target\osi_document.json
+[0m00:36:38.438421 [debug] [MainThread]: Command `python -m dbt.cli.main parse` succeeded at 00:36:38.438421 after 7.63 seconds
+[0m00:36:38.438421 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020F90D52490>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020F90D3AC50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020F90D3A910>]}
+[0m00:36:38.438421 [debug] [MainThread]: Flushing usage events
+[0m00:36:40.123489 [debug] [MainThread]: An error was encountered while trying to flush usage events

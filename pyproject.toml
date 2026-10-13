@@ -1,0 +1,16 @@
+[project]
+name = "ai-ready-data-platform"
+version = "0.1.0"
+description = "Demo data platform: Python ingestion, DuckDB store, dbt transformations."
+requires-python = ">=3.11"
+dependencies = [
+  "duckdb>=1.0,<2",
+  "dbt-duckdb>=1.8,<2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
