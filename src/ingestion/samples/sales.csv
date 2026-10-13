@@ -1,0 +1,5 @@
+sale_id,customer_id,product,quantity,unit_price,sale_date
+1,101,Widget,3,9.99,2026-01-05
+2,102,Gadget,1,24.50,2026-01-06
+3,101,Gizmo,2,14.00,2026-01-09
+4,103,Widget,5,9.99,2026-01-12
