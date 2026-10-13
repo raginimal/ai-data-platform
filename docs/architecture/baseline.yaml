@@ -117,3 +117,21 @@ boundaries:
     impact_paths: [".github/CODEOWNERS"]
     change_paths: []
     agents: ["architecture", "code-quality"]
+
+  - id: BL-INGEST
+    area: "Ingestion Component"
+    baseline: "Ingestion is the only writer to the raw schema and does not import the transform component (PLAT-001)"
+    flexible: "Module internals, validation logic, and loaders within src/ingestion"
+    change_summary: "Ingestion boundary changed"
+    impact_paths: ["src/ingestion/*"]
+    change_paths: []
+    agents: ["architecture", "code-quality"]
+
+  - id: BL-TRANSFORM
+    area: "Transformation Layers and Store Engine"
+    baseline: "dbt layers raw to staging to marts on DuckDB; marts read only staging (PLAT-002, PLAT-004)"
+    flexible: "Model SQL, tests, and documentation within the approved layers"
+    change_summary: "Store engine, target, or layer structure changed"
+    impact_paths: ["src/transform/dbt_project.yml", "src/transform/models/*"]
+    change_paths: ["src/transform/profiles.yml"]
+    agents: ["architecture", "security-devops"]

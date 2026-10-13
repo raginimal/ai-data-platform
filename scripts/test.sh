@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-if test -d tests && find tests -type f -name 'test_*.py' -print -quit | grep -q .; then
-  python -m pytest tests -q
+if test -f pyproject.toml; then
+  python -m pytest
   exit 0
 fi
 
