@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Gate 1 - Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build artifact
+        run: bash scripts/build-artifact.sh
+
+  core-repository:
+    name: Core repository validation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate baseline repository
+        run: bash scripts/validate.sh
+
+  advisory-review:
+    name: Gate 5 - Advisory AI review
+    runs-on: ubuntu-latest
+    needs: [build, core-repository]
+    if: github.event_name == 'pull_request'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Publish review contract
+        run: |
+          echo "Advisory review capabilities: architecture, security, devops, ai-engineering"
+          echo "See agents/ for review instructions. Deterministic checks and human approvals remain authoritative."
